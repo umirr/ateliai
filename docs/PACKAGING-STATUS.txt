@@ -1,0 +1,7 @@
+2026-09-23: Ateliai 0.8.3 Windows x64 설치 파일 제작 완료.
+파일: outputs/windows/Ateliai-Setup-0.8.3-x64.exe
+SHA256: 7D93D9474306249ABB3D80113BC1F70FF53700051A9A3CEDEDAD65284D7D044B
+자동 테스트 53개 통과, 정적 검사 이상 없음.
+네이티브 별도 데이터 초기화 1,635ms, 중복 프로세스 종료 코드 0, 내장 아이콘 확인.
+GitHub 업로드 보류.
+사용자가 제공한 ICO 원본을 그대로 적용하여 Windows 설치 파일 재빌드 완료. 원본/리소스 SHA256 일치 확인.

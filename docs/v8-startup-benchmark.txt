@@ -1,0 +1,1 @@
+1000 revisions / 100 characters: cold 544 ms, cached 14 ms
