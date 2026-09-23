@@ -40,12 +40,15 @@ void main() {
       await tester.runAsync(() async {
         final flutterRoot =
             Platform.environment['FLUTTER_ROOT'] ?? '../../work/flutter';
-        final bytes = await File(
+        final icons = File(
           '$flutterRoot/bin/cache/artifacts/material_fonts/materialicons-regular.otf',
-        ).readAsBytes();
-        await (FontLoader(
-          'MaterialIcons',
-        )..addFont(Future.value(ByteData.sublistView(bytes)))).load();
+        );
+        if (await icons.exists()) {
+          await (FontLoader('MaterialIcons')..addFont(
+                Future.value(ByteData.sublistView(await icons.readAsBytes())),
+              ))
+              .load();
+        }
       });
       final c = documentController({'body': "기본적인 구조 : '선택지를 제한한다'"});
       final boundary = GlobalKey();
