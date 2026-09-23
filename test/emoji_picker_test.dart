@@ -38,8 +38,10 @@ void main() {
         );
       }
       await tester.runAsync(() async {
+        final flutterRoot =
+            Platform.environment['FLUTTER_ROOT'] ?? '../../work/flutter';
         final bytes = await File(
-          '../../work/flutter/bin/cache/artifacts/material_fonts/materialicons-regular.otf',
+          '$flutterRoot/bin/cache/artifacts/material_fonts/materialicons-regular.otf',
         ).readAsBytes();
         await (FontLoader(
           'MaterialIcons',
